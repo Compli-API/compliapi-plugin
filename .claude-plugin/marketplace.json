@@ -1,0 +1,13 @@
+{
+  "name": "compliapi",
+  "description": "CompliAPI's official Claude Code plugins: OFAC and global sanctions screening for crypto addresses, emails, websites, IDs, and countries.",
+  "owner": { "name": "CompliAPI", "email": "help@compliapi.com", "url": "https://compliapi.com" },
+  "plugins": [
+    {
+      "name": "compliapi",
+      "source": "./",
+      "description": "OFAC and global sanctions screening tools for Claude Code: crypto addresses, emails, websites, government IDs, countries, VPN detection, and IP geolocation.",
+      "version": "1.0.0"
+    }
+  ]
+}

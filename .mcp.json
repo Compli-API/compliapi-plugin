@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "compliapi": {
+      "type": "http",
+      "url": "https://api.compliapi.com/mcp",
+      "headersHelper": "${CLAUDE_PLUGIN_ROOT}/scripts/get-auth-headers.sh"
+    }
+  }
+}
