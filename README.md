@@ -1,6 +1,6 @@
 # CompliAPI plugin for Claude Code
 
-Real-time OFAC and global sanctions screening inside Claude Code. Bundles the hosted [CompliAPI MCP server](https://docs.compliapi.com/mcp) — seven read-only tools that screen crypto wallet addresses (any chain, ENS names supported), emails, websites, government IDs, and countries against the US OFAC SDN and Consolidated lists plus 10+ global sanctions, crime, and risk lists, with VPN detection and IP geolocation.
+Real-time OFAC and global sanctions screening inside Claude Code. Bundles the hosted [CompliAPI MCP server](https://docs.compliapi.com/mcp) — eight read-only tools that screen crypto wallet addresses (any chain, ENS names supported), emails, websites, government IDs, and countries against the US OFAC SDN and Consolidated lists plus 10+ global sanctions, crime, and risk lists, screen person names against the OpenSanctions politically exposed persons (PEP) dataset, and provide VPN detection and IP geolocation.
 
 ## Install
 
@@ -20,7 +20,7 @@ export COMPLIAPI_API_TOKEN=capi_...        # in your shell profile, or
 mkdir -p ~/.compliapi && echo 'capi_...' > ~/.compliapi/token && chmod 600 ~/.compliapi/token
 ```
 
-**No token** — listing tools always works anonymously; screening calls can be paid per request via [x402](https://docs.compliapi.com/payments) USDC micropayments ($0.01 on Base) with an x402-capable wallet.
+**No token** — listing tools always works anonymously; screening calls can be paid per request via [x402](https://docs.compliapi.com/payments) USDC micropayments with an x402-capable wallet — $0.01 per call on Base, except `screen_pep` at $0.05 (its upstream dataset is metered per query; the amount in the 402 challenge is always authoritative).
 
 ## Use
 
@@ -30,7 +30,7 @@ Ask naturally ("screen 0x7F36…e1B and compliance@example.com") or invoke the w
 /compliapi:screen vitalik.eth
 ```
 
-Every screening response reports `sanctioned` (a government sanctions-list hit), `flagged` (any hit, including crime/risk lists), and per-list matches with official source URLs.
+Every list-screening response reports `sanctioned` (a government sanctions-list hit), `flagged` (any hit, including crime/risk lists), and per-list matches with official source URLs. `screen_pep` returns its own shape: scored candidates (`score` 0–1, `match` above the 0.7 threshold) and a top-level `pep` flag — PEP status is not a sanctions designation.
 
 | Tool | Screens |
 |---|---|
@@ -39,6 +39,7 @@ Every screening response reports `sanctioned` (a government sanctions-list hit),
 | `screen_website` | Websites and domains |
 | `screen_government_id` | Passports, national IDs, tax IDs |
 | `screen_country` | Country sanctions designations |
+| `screen_pep` | Person names against the OpenSanctions PEP dataset (scored matching; optional `birth_date`, `country`) |
 | `detect_vpn` | VPN/proxy detection for an IP |
 | `geolocate_ip` | IP geolocation + sanctioned-country flag |
 
