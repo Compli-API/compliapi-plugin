@@ -1,7 +1,7 @@
 {
   "name": "compliapi",
   "displayName": "CompliAPI",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "OFAC and global sanctions screening tools: screen crypto addresses (any chain, ENS), emails, websites, government IDs, and countries against OFAC SDN, OFAC Consolidated, and 10+ sanctions, crime, and risk lists; screen person names against the OpenSanctions PEP dataset — plus VPN detection and IP geolocation.",
   "author": { "name": "CompliAPI", "email": "help@compliapi.com", "url": "https://compliapi.com" },
   "homepage": "https://docs.compliapi.com/mcp",
