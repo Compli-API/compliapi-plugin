@@ -26,7 +26,7 @@ Screen whatever identifiers the user provides using the CompliAPI MCP tools, the
 
 ## Auth and payment
 
-Tools work with a CompliAPI API token (free tier: 10,000 requests/month — set `COMPLIAPI_API_TOKEN` or `~/.compliapi/token`, see the plugin README) or anonymously via x402 USDC pay-per-call ($0.01 on Base for every tool except `screen_pep`, which costs $0.05 because its upstream dataset is metered per query — the amount in the payment challenge is always authoritative). If a tool call returns a 402/payment-required error result, tell the user their options: create a free token at https://app.compliapi.com/account/signup, or pay per call with an x402-capable wallet. Do not retry the call unchanged.
+Tools work with a CompliAPI API token (free tier: 1,000 requests/month, paid plans 10,000 per seat — set `COMPLIAPI_API_TOKEN` or `~/.compliapi/token`, see the plugin README) or anonymously via x402 USDC pay-per-call ($0.01 on Base for every tool except `screen_pep`, which costs $0.05 because its upstream dataset is metered per query — the amount in the payment challenge is always authoritative). If a tool call returns a 402/payment-required error result, tell the user their options: create a free token at https://app.compliapi.com/account/signup, or pay per call with an x402-capable wallet. Do not retry the call unchanged.
 
 ## Boundaries
 
