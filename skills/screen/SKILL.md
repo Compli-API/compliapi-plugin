@@ -18,7 +18,7 @@ Screen whatever identifiers the user provides using the CompliAPI MCP tools, the
    - `screen_pep` — a person's full name (`name`, 2–200 characters) against the OpenSanctions PEP dataset; pass `birth_date` (`YYYY-MM-DD` or partial, e.g. `1961`) and `country` (name or ISO code) whenever known — they sharpen matching
    - `detect_vpn` / `geolocate_ip` — IP trust and sanctioned-country flags
 3. Interpret each response precisely — the two flags mean different things:
-   - `sanctioned: true` — a **government sanctions list** matched (OFAC SDN, OFAC Consolidated, EU, UK, France, Japan, Israel). Treat as a hard stop.
+   - `sanctioned: true` — a **government sanctions list** matched (OFAC SDN, OFAC Consolidated, EU, UK, Switzerland, France, Japan, Israel). Treat as a hard stop.
    - `flagged: true` with `sanctioned: false` — a **crime or risk list** matched (e.g. ransomware payment addresses, Tornado Cash association). Exposure signal, not a designation; say so explicitly.
    - Both false — no match on the lists checked (name the lists from `lists_checked`).
    - `screen_pep` uses a different envelope: `pep: true` means at least one candidate cleared the 0.7 score threshold (`matches[].match`); lower-scored candidates are listed for review but are not hits. PEP status is a due-diligence signal (current/former public officials, relatives, close associates), **not** a sanctions designation — never report it as `sanctioned`. To sanctions-screen the same person, use the other tools on their identifiers.
