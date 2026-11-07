@@ -11,7 +11,7 @@
       "name": "compliapi",
       "source": "./",
       "description": "OFAC, UN and global sanctions screening tools for Claude Code: names (people, companies, vessels, aircraft), crypto addresses, emails, websites, government IDs, ships (IMO/MMSI), aircraft, countries, PEP checks, VPN detection, and IP geolocation.",
-      "version": "1.2.0"
+      "version": "1.2.1"
     }
   ]
 }
