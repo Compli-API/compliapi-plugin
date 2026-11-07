@@ -1,7 +1,7 @@
 {
   "name": "compliapi",
   "displayName": "CompliAPI",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "OFAC, UN and global sanctions screening tools: screen crypto addresses (any chain, ENS), emails, websites, government IDs, ships (IMO/MMSI), aircraft (registration, serial, Mode S) and countries against OFAC SDN, OFAC Consolidated, the UN Security Council list and 10+ sanctions, crime, and risk lists; screen names of people, companies, vessels and aircraft against sanctions-list names and aliases (scored); screen person names against the OpenSanctions PEP dataset — plus VPN detection and IP geolocation.",
   "author": {
     "name": "CompliAPI",

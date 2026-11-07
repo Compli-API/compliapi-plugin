@@ -15,7 +15,7 @@ Screen whatever identifiers the user provides using the CompliAPI MCP tools, the
    - `screen_website` — websites or bare domains
    - `screen_government_id` — passports, national IDs, tax IDs (similarity-ranked matching)
    - `screen_vessel` — ships by IMO number or MMSI; `screen_aircraft` — aircraft by registration (tail number), serial number or Mode S code
-   - `screen_name` — a person, company, vessel or aircraft name against sanctions-list names and aliases (OFAC SDN and Consolidated, UN Security Council, EU, UK, Swiss SECO, Canadian, Australian DFAT, French Trésor and Japan MOF); pass `birth_date` (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`) and `country` (name or ISO code) whenever known, and `type` (`individual`, `entity`, `vessel`, `aircraft`) when it is clear
+   - `screen_name` — a person, company, vessel or aircraft name against sanctions-list names and aliases (OFAC SDN and Consolidated, UN Security Council, EU, UK, Swiss SECO, Canadian, Australian DFAT, French Trésor and Japan MOF); pass `birth_date` (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`) and `country` (name or ISO code) whenever known, `id_number` when the user gives a passport, national ID or registration number for that person or company (a party listing it ranks first), and `type` (`individual`, `entity`, `vessel`, `aircraft`) when it is clear
    - `screen_country` — country names or ISO codes (sanctions designations, e.g. comprehensive embargoes)
    - `screen_pep` — a person's full name (`name`, 2–200 characters) against the OpenSanctions PEP dataset; pass `birth_date` (`YYYY-MM-DD` or partial, e.g. `1961`) and `country` (name or ISO code) whenever known — they sharpen matching
    - `detect_vpn` / `geolocate_ip` — IP trust and sanctioned-country flags

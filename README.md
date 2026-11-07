@@ -30,7 +30,7 @@ Ask naturally ("screen 0x7F36…e1B and compliance@example.com", "is the tanker 
 /compliapi:screen vitalik.eth
 ```
 
-Every list-screening response reports `sanctioned` (a government sanctions-list hit), `flagged` (any hit, including crime/risk lists), and per-list matches with official source URLs. `screen_name` matches are fuzzy, each with a `score` (0–100) and `reasons` — a partial match is a lead to review, not a confirmed hit; pass `birth_date` and `country` to separate namesakes. `screen_pep` returns its own shape: scored candidates (`score` 0–1, `match` above the 0.7 threshold) and a top-level `pep` flag — PEP status is not a sanctions designation.
+Every list-screening response reports `sanctioned` (a government sanctions-list hit), `flagged` (any hit, including crime/risk lists), and per-list matches with official source URLs. `screen_name` matches are fuzzy, each with a `score` (0–100) and `reasons` — a partial match is a lead to review, not a confirmed hit; pass `birth_date`, `country` and `id_number` (passport, national ID or registration number) to separate namesakes. `screen_pep` returns its own shape: scored candidates (`score` 0–1, `match` above the 0.7 threshold) and a top-level `pep` flag — PEP status is not a sanctions designation.
 
 | Tool | Screens |
 |---|---|
@@ -38,7 +38,7 @@ Every list-screening response reports `sanctioned` (a government sanctions-list 
 | `screen_email` | Email addresses |
 | `screen_website` | Websites and domains |
 | `screen_government_id` | Passports, national IDs, tax IDs |
-| `screen_name` | Names of people, companies, vessels and aircraft against sanctions-list names and aliases (OFAC, UN, EU, UK, SECO, Canada, Australia, Trésor, Japan MOF; scored; optional `type`, `birth_date`, `country`, `threshold`) |
+| `screen_name` | Names of people, companies, vessels and aircraft against sanctions-list names and aliases (OFAC, UN, EU, UK, SECO, Canada, Australia, Trésor, Japan MOF; scored; optional `type`, `birth_date`, `country`, `id_number`, `threshold`) |
 | `screen_vessel` | Ships by IMO number or MMSI |
 | `screen_aircraft` | Aircraft by registration (tail number), serial number or Mode S code |
 | `screen_country` | Country sanctions designations |
