@@ -1,11 +1,27 @@
 {
   "name": "compliapi",
   "displayName": "CompliAPI",
-  "version": "1.1.1",
-  "description": "OFAC and global sanctions screening tools: screen crypto addresses (any chain, ENS), emails, websites, government IDs, and countries against OFAC SDN, OFAC Consolidated, and 10+ sanctions, crime, and risk lists; screen person names against the OpenSanctions PEP dataset — plus VPN detection and IP geolocation.",
-  "author": { "name": "CompliAPI", "email": "help@compliapi.com", "url": "https://compliapi.com" },
+  "version": "1.2.0",
+  "description": "OFAC, UN and global sanctions screening tools: screen crypto addresses (any chain, ENS), emails, websites, government IDs, ships (IMO/MMSI), aircraft (registration, serial, Mode S) and countries against OFAC SDN, OFAC Consolidated, the UN Security Council list and 10+ sanctions, crime, and risk lists; screen names of people, companies, vessels and aircraft against sanctions-list names and aliases (scored); screen person names against the OpenSanctions PEP dataset — plus VPN detection and IP geolocation.",
+  "author": {
+    "name": "CompliAPI",
+    "email": "help@compliapi.com",
+    "url": "https://compliapi.com"
+  },
   "homepage": "https://docs.compliapi.com/mcp",
   "repository": "https://github.com/Compli-API/compliapi-plugin",
   "license": "MIT",
-  "keywords": ["sanctions", "ofac", "pep", "compliance", "aml", "kyc", "screening", "crypto"]
+  "keywords": [
+    "aircraft",
+    "aml",
+    "compliance",
+    "crypto",
+    "kyc",
+    "name-screening",
+    "ofac",
+    "pep",
+    "sanctions",
+    "screening",
+    "vessel"
+  ]
 }

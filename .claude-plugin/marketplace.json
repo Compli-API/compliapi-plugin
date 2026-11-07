@@ -1,13 +1,17 @@
 {
   "name": "compliapi",
-  "description": "CompliAPI's official Claude Code plugins: OFAC and global sanctions screening for crypto addresses, emails, websites, IDs, and countries, plus PEP screening.",
-  "owner": { "name": "CompliAPI", "email": "help@compliapi.com", "url": "https://compliapi.com" },
+  "description": "CompliAPI's official Claude Code plugins: OFAC, UN and global sanctions screening for names, crypto addresses, emails, websites, IDs, ships, aircraft, and countries, plus PEP screening.",
+  "owner": {
+    "name": "CompliAPI",
+    "email": "help@compliapi.com",
+    "url": "https://compliapi.com"
+  },
   "plugins": [
     {
       "name": "compliapi",
       "source": "./",
-      "description": "OFAC and global sanctions screening tools for Claude Code: crypto addresses, emails, websites, government IDs, countries, PEP checks, VPN detection, and IP geolocation.",
-      "version": "1.1.1"
+      "description": "OFAC, UN and global sanctions screening tools for Claude Code: names (people, companies, vessels, aircraft), crypto addresses, emails, websites, government IDs, ships (IMO/MMSI), aircraft, countries, PEP checks, VPN detection, and IP geolocation.",
+      "version": "1.2.0"
     }
   ]
 }
