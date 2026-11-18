@@ -1,6 +1,6 @@
 # CompliAPI plugin for Claude Code
 
-Real-time OFAC and global sanctions screening inside Claude Code. Bundles the hosted [CompliAPI MCP server](https://docs.compliapi.com/mcp) — eleven read-only tools that screen crypto wallet addresses (any chain, ENS names supported), emails, websites, government IDs, ships (IMO number or MMSI), aircraft (registration, serial number or Mode S code), and countries against the US OFAC SDN and Consolidated lists, the UN Security Council list plus 10+ global sanctions, crime, and risk lists — including two crypto phishing-domain blocklists (ScamSniffer and MetaMask) and the addresses frozen by the stablecoin issuers Tether (USDT) and Circle (USDC) on Ethereum, TRON and the main EVM networks; screen the names of people, companies, vessels and aircraft against sanctions-list names and aliases with a 0–100 score; screen person names against the OpenSanctions politically exposed persons (PEP) dataset; and provide VPN detection and IP geolocation.
+Real-time OFAC and global sanctions screening inside Claude Code. Bundles the hosted [CompliAPI MCP server](https://docs.compliapi.com/mcp) — eleven read-only tools that screen crypto wallet addresses (any chain, ENS names supported), emails, websites, government IDs, ships (IMO number or MMSI), aircraft (registration, serial number or Mode S code), and countries against the US OFAC SDN and Consolidated lists, the UN Security Council list plus 10+ global sanctions, crime, and risk lists — including two crypto phishing-domain blocklists (ScamSniffer and MetaMask) and the addresses frozen by the stablecoin issuers Tether (USDT) and Circle (USDC) on Ethereum, TRON and the main EVM networks, and by Paxos (PYUSD, USDP, USDG) on Ethereum; screen the names of people, companies, vessels and aircraft against sanctions-list names and aliases with a 0–100 score; screen person names against the OpenSanctions politically exposed persons (PEP) dataset; and provide VPN detection and IP geolocation.
 
 ## Install
 
@@ -41,7 +41,7 @@ Every list-screening response reports `sanctioned` (a government sanctions-list 
 | `screen_name` | Names of people, companies, vessels and aircraft against sanctions-list names and aliases (OFAC, UN, EU, UK, SECO, Canada, Australia, Trésor, Japan MOF; scored; optional `type`, `birth_date`, `country`, `id_number`, `threshold`) |
 | `screen_vessel` | Ships by IMO number or MMSI |
 | `screen_aircraft` | Aircraft by registration (tail number), serial number or Mode S code |
-| `screen_country` | Country sanctions designations |
+| `screen_country` | Country sanctions designations (OFAC); FATF black and grey lists when `lists` names `fatf` |
 | `screen_pep` | Person names against the OpenSanctions PEP dataset (scored matching; optional `birth_date`, `country`) |
 | `detect_vpn` | VPN/proxy detection for an IP |
 | `geolocate_ip` | IP geolocation + sanctioned-country flag |
