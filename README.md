@@ -38,7 +38,7 @@ Every list-screening response reports `sanctioned` (a government sanctions-list 
 | `screen_email` | Email addresses |
 | `screen_website` | Websites, domains and full URLs, including two crypto phishing-domain blocklists |
 | `screen_government_id` | Passports, national IDs, tax IDs |
-| `screen_name` | Names of people, companies, vessels and aircraft against sanctions-list names and aliases (OFAC, UN, EU, UK, SECO, Canada, Australia, Trésor, Japan MOF, plus the US export-control and debarment lists such as the BIS Entity List, which are flagged, never sanctioned; scored; optional `type`, `birth_date`, `country`, `id_number`, `threshold`) |
+| `screen_name` | Names of people, companies, vessels and aircraft against sanctions-list names and aliases (OFAC, UN, EU, UK, SECO, Canada, Australia, New Zealand, Trésor, Japan MOF, plus the US export-control and debarment lists such as the BIS Entity List, which are flagged, never sanctioned; scored; optional `type`, `birth_date`, `country`, `id_number`, `threshold`) |
 | `screen_vessel` | Ships by IMO number or MMSI |
 | `screen_aircraft` | Aircraft by registration (tail number), serial number or Mode S code |
 | `screen_country` | Country sanctions designations (OFAC); FATF black and grey lists when `lists` names `fatf` |
