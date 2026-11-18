@@ -13,7 +13,7 @@ Real-time OFAC and global sanctions screening inside Claude Code. Bundles the ho
 
 Works two ways — pick one:
 
-**Free API token** (free tier: 1,000 requests/month, no credit card; Developer and Team plans 10,000 per seat) — create one at [app.compliapi.com](https://app.compliapi.com/account/signup), then either:
+**Free API token** (free tier: 100 requests/month, no credit card; Developer plan 1,000/month, Team plan 3,000 per seat) — create one at [app.compliapi.com](https://app.compliapi.com/account/signup), then either:
 
 ```bash
 export COMPLIAPI_API_TOKEN=capi_...        # in your shell profile, or
