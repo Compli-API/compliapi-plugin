@@ -1,6 +1,6 @@
 # CompliAPI plugin for Claude Code
 
-Real-time OFAC and global sanctions screening inside Claude Code. Bundles the hosted [CompliAPI MCP server](https://docs.compliapi.com/mcp) — eleven read-only tools that screen crypto wallet addresses (any chain, ENS names supported), emails, websites, government IDs, ships (IMO number or MMSI), aircraft (registration, serial number or Mode S code), and countries against the US OFAC SDN and Consolidated lists, the UN Security Council list plus 10+ global sanctions, crime, and risk lists — including two crypto phishing-domain blocklists (ScamSniffer and MetaMask) and the addresses frozen by the stablecoin issuers Tether (USDT) and Circle (USDC) on Ethereum, TRON and the main EVM networks, and by Paxos (PYUSD, USDP, USDG) on Ethereum; screen the names of people, companies, vessels and aircraft against sanctions-list names and aliases with a 0–100 score; screen person names against the OpenSanctions politically exposed persons (PEP) dataset; and provide VPN detection and IP geolocation.
+Real-time OFAC and global sanctions screening inside Claude Code. Bundles the hosted [CompliAPI MCP server](https://docs.compliapi.com/mcp) — twelve read-only tools that screen crypto wallet addresses (any chain, ENS names supported), emails, websites, government IDs, ships (IMO number or MMSI), aircraft (registration, serial number or Mode S code), and countries against the US OFAC SDN and Consolidated lists, the UN Security Council list plus 10+ global sanctions, crime, and risk lists — including two crypto phishing-domain blocklists (ScamSniffer and MetaMask) and the addresses frozen by the stablecoin issuers Tether (USDT) and Circle (USDC) on Ethereum, TRON and the main EVM networks, and by Paxos (PYUSD, USDP, USDG) on Ethereum; screen the names of people, companies, vessels and aircraft against sanctions-list names and aliases with a 0–100 score; screen person names against the OpenSanctions politically exposed persons (PEP) dataset; and provide VPN detection and IP geolocation.
 
 ## Install
 
@@ -45,6 +45,7 @@ Every list-screening response reports `sanctioned` (a government sanctions-list 
 | `screen_pep` | Person names against the OpenSanctions PEP dataset (scored matching; optional `birth_date`, `country`, `limit`) |
 | `detect_vpn` | VPN/proxy detection for an IP |
 | `geolocate_ip` | IP geolocation + sanctioned-country flag |
+| `inspect_ip` | Both of the above plus a sanctions screen of the IP's country, in one call (one request); `vpn` is `null` when unknown |
 
 ## Links
 
